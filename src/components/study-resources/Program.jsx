@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Subject from './Subject'
 
 export default function Program({ selectedProgram, goToHome, goToProgram, setChoose }) {
     const semesters = selectedProgram?.semesters || Array.from({ length: 9 }, (_, i) => i + 1)
@@ -14,10 +15,10 @@ export default function Program({ selectedProgram, goToHome, goToProgram, setCho
     const filteredSubjects = subjects
         .filter((item) => select === 'All' ? true : item.sem === select)
         .filter((item) => item.name.toLowerCase().includes(subjectSearch.toLowerCase()))
-        
+
 
     return (
-        <div className='w-full h-full py-30 flex justify-center'>
+        <div className='w-full min-h-screen py-30 flex justify-center'>
             <div className='w-7xl'>
 
                 <div className='flex items-center gap-6 pb-6'>
@@ -32,11 +33,14 @@ export default function Program({ selectedProgram, goToHome, goToProgram, setCho
                 <h1 className='font-bold text-8xl tracking-tighter leading-22'>{selectedProgram.name}</h1>
 
                 <div className='flex items-center justify-between mt-18 '>
+
+
+                    {/* Sem Select */}
                     <div className='flex gap-2 flex-wrap shrink-0'>
                         {sem.map((item, i) => (
                             <div key={i} onClick={() => setSelect(item)}
-                                className={`border w-fit group p-1 px-2 md:p-1.5 rounded-xl backdrop-blur-xs overflow-hidden md:px-3 cursor-pointer relative z-999999 transition-all ease-in-out duration-200 hover:scale-106
-                        ${select === item ? 'bg-accent/80 text-[#Ecf1ff] border-black/10' : 'bg-black/3 border-black/20'}`}>
+                                className={`border w-fit group p-1 px-2 md:p-1 rounded-xl backdrop-blur-xs overflow-hidden md:px-3 cursor-pointer relative z-999999 transition-all ease-in-out duration-200 hover:scale-106
+                        ${select === item ? 'bg-accent/86 text-[#Ecf1ff] border-black/10' : 'bg-black/3 border-black/20'}`}>
                                 <h1 className='text-xs md:text-sm font-dot uppercase tracking-wide whitespace-nowrap relative backdrop-blur-0 z-9'>
                                     {item === 'All' ? 'All' : `Sem ${item}`}
                                 </h1>
@@ -47,7 +51,7 @@ export default function Program({ selectedProgram, goToHome, goToProgram, setCho
 
                     <div className='border rounded-full border-black/20 h-10 flex items-center px-3 w-sm bg-black/3'>
                         <i className="ph ph-magnifying-glass mr-2 text-lg cursor-pointer text-black/70"></i>
-                        <input className='outline-0 text-sm capitalize w-full ' type="text" placeholder='Search Subjects...' value={subjectSearch} onChange={(e) => setSubjectSearch(e.target.value)}/>
+                        <input className='outline-0 text-sm capitalize w-full ' type="text" placeholder='Search Subjects...' value={subjectSearch} onChange={(e) => setSubjectSearch(e.target.value)} />
                         {subjectSearch && (
                             <i onClick={() => setSubjectSearch('')} className="ph ph-x text-lg cursor-pointer text-black/50 hover:text-black/70"></i>
                         )}
@@ -75,6 +79,13 @@ export default function Program({ selectedProgram, goToHome, goToProgram, setCho
                 </div>
 
             </div>
+
+            {open && selectedSubject && (
+                <Subject
+                    subject={selectedSubject}
+                    onClose={() => { setOpen(false); setSelectedSubject(null) }}
+                />
+            )}
         </div>
     )
 }

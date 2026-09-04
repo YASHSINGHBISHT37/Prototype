@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { p } from '../components/study-resources/p';
 import Program from '../components/study-resources/Program';
 
@@ -6,13 +6,21 @@ export default function StudyResources() {
     document.title = "myResult | Study Resources";
 
     const [programSearch, setProgramSearch] = useState('')
+    const [debouncedSearch, setDebouncedSearch] = useState('')
     const [selectedProgram, setSelectedProgram] = useState(null)
     const [choose, setChoose] = useState(false)
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setDebouncedSearch(programSearch)
+        }, 200)
+        return () => clearTimeout(timer)
+    }, [programSearch])
+
     const filteredPrograms = p
         .filter((item) =>
-            item.name.toLowerCase().includes(programSearch.toLowerCase()) ||
-            item.code.toLowerCase().includes(programSearch.toLowerCase())
+            item.name.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
+            item.code.toLowerCase().includes(debouncedSearch.toLowerCase())
         )
         .sort((a, b) => a.code.localeCompare(b.code))
 
@@ -28,7 +36,7 @@ export default function StudyResources() {
     }
 
     return (
-        <div className='min-h-screen flex justify-center py-30'>
+        <div className='min-h-screen w-full flex justify-center py-30'>
             <div className='w-7xl'>
 
                 <div className='mb-20'>
@@ -53,7 +61,12 @@ export default function StudyResources() {
 
                 <div className='mt-6 grid grid-cols-5 gap-2'>
                     {filteredPrograms.map((item, j) => (
-                        <div onClick={() => { setSelectedProgram(item); setChoose(true) }} key={j} className='overflow-hidden border border-black/20 h-30 flex flex-col justify-between rounded-xl p-4 pb-3 bg-accent-bg relative backdrop-blur-lg cursor-pointer group'>
+                        <div
+                            onClick={() => { setSelectedProgram(item); setChoose(true) }}
+                            key={item.code}
+                            style={{ animationDelay: debouncedSearch ? `${j * 20}ms` : '0ms' }}
+                            className='overflow-hidden border border-black/20 h-30 flex flex-col justify-between rounded-xl p-4 pb-3 bg-muted-bg relative backdrop-blur-lg cursor-pointer group animate-fade-in'
+                        >
                             <h1 className='text-4xl font-dot font-bold relative z-2'>{item.code}</h1>
                             <p className='text-sm tracking-tighter text-muted-text leading-4 transition-all ease-in-out duration-300 relative z-2'>{item.name}</p>
                             <div className="w-full aspect-square bg-accent fixed top-100 rounded-full left-0 z-1 blur-[3vh] group-hover:top-16 transition-all duration-350 ease-in-out"></div>
@@ -68,4 +81,4 @@ export default function StudyResources() {
             </div>
         </div>
     )
-}   
+}

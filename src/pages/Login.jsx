@@ -86,7 +86,7 @@ export default function Test4({ showToggle = true, type = 'password' }) {
                                 </div>
                             </div>
 
-                            <h1 className='text-center text-sm font-dot z-9 absolute mt-2 text-[#fe330a]'>Login sjadhsa sauhdug sjadjh sjhdjh</h1>
+                            <h1 className='text-center text-sm font-dot z-9 absolute mt-2 text-[#fe330a]'>For ERROR!</h1>
                         </div>
 
                         {/* Submit */}

@@ -2,8 +2,9 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 const navItems = [
-    { name: "Home", href: "/" },
+    // { name: "Home", href: "/" },
     { name: "IPU Result", href: "/ipu-result" },
+    { name: "Result", href: "/result" },
     { name: "Study Resource", href: "/study-resources" },
     { name: "Leaderboard", href: "/leaderboard" },
     { name: "About Us", href: "/about" },
