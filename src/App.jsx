@@ -7,6 +7,7 @@ import Program from './components/study-resources/Program'
 import Footer from './components/navigation/Footer'
 import Result from './components/ipu-result/Result'
 import Leaderboard from './pages/Leaderboard'
+import Loading from './components/ui/Loading'
 
 export default function App() {
   return (

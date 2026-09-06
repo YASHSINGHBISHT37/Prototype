@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import GradeDistribution from './analysis/GradeDistribution'
+import SemStats from './analysis/SemStats'
+import MarksSheet from './MarksSheet'
 // import { TextShimmer } from '@/components/motion-primitives/text-shimmer'
 
 
@@ -20,19 +23,9 @@ export default function Result() {
     ]
 
 
-    const subjects = [
-        { paperCode: "BCA-202T", subjectName: "OPERATING SYSTEMS", credits: 4, internal: 37, external: 51, total: 88, grade: "A+" },
-        { paperCode: "BCA-204T", subjectName: "SOFTWARE TESTING", credits: 4, internal: 40, external: 52, total: 92, grade: "O" },
-        { paperCode: "BCA-212T", subjectName: "INTRODUCTION TO DATA SCIENCE", credits: 4, internal: 32, external: 51, total: 83, grade: "A+" },
-        { paperCode: "BCA-222T", subjectName: "DIGITAL MARKETING", credits: 3, internal: 35, external: 57, total: 92, grade: "O" },
-        { paperCode: "BCA-232", subjectName: "INTRODUCTION TO LOGIC AND CRITICAL THINKING", credits: 2, internal: 38, external: 43, total: 81, grade: "A+" },
-        { paperCode: "BCA-234", subjectName: "HEALTH AND WELLNESS, YOGA EDUCATION AND SPORTS AND FITNESS", credits: 2, internal: null, external: 92, total: 92, grade: "O" },
-        { paperCode: "BCA-202P", subjectName: "OPERATING SYSTEMS LAB", credits: 1, internal: 36, external: 44, total: 80, grade: "A+" },
-        { paperCode: "BCA-204P", subjectName: "SOFTWARE TESTING LAB", credits: 1, internal: 37, external: 47, total: 84, grade: "A+" },
-        { paperCode: "BCA-212P", subjectName: "DATA SCIENCE LAB", credits: 2, internal: 30, external: 46, total: 76, grade: "A+" }
-    ];
+  
 
-    const grid = '[1fr_auto_0.8fr_0.8fr_0.8fr_0.8fr_0.8fr]'
+
 
 
     return (
@@ -144,17 +137,17 @@ export default function Result() {
                     ))}
                 </div> */}
 
-                <div className='md:flex grid grid-cols-2 md:gap-3 gap-2 relative bg-black/3 border border-black/20 p-6 rounded-3xl overflow-hidden'>
+                <div className='md:flex grid grid-cols-2 md:gap-3 gap-2 relative bg-black/3 border border-black/20 p-6 rounded-4xl overflow-hidden'>
                     {semMarks.map((item) => (
-                        <div key={item.label}  className="w-full group flex flex-col p-4 justify-center gap-1 items-center py-4">
-                            <p className="text-xs md:text-sm uppercase pb-2 relative z-9 font-bold tracking-tighter">{item.label}</p>
+                        <div key={item.label} className="w-full group flex flex-col borde justify-center gap-1 items-center py-2">
+                            <p className="uppercase pb-2 relative z-9 font-bold tracking-tighter">{item.label}</p>
                             <h1 className="text-5xl md:text-7xl font-bold relative z-9 tracking-tight uppercase font-dot text-[#fe330a]/90">
                                 {item.value}
                                 {item.outOf && (
-                                    <span className='text-sm md:text-xl font-normal tracking-normal text-black'>{item.outOf}</span>
+                                    <span className='text-c md:text-xl font-normal tracking-normal text-black'>{item.outOf}</span>
                                 )}
                             </h1>
-                            <p className="text-xs md:text-sm pt-2 relative z-9 leading-3">{item.subHead}</p>
+                            <p className="text-xs text-muted-text md:text-xs pt-3 relative z-9 leading-3">{item.subHead}</p>
 
                             <div className="w-full aspect-square bg-[#fe330a]/80 fixed top-60 rounded-full left-0 -z-1 blur-[3vh] group-hover:top-16 transition-all duration-350 ease-in-out"></div>
                         </div>
@@ -162,51 +155,23 @@ export default function Result() {
                 </div>
 
                 <div className='md:flex md:flex-row flex-col flex items-center justify-between w-full gap-3'>
-                    <div className='border border-black/20 w-full rounded-2xl h-90 bg-black/3'></div>
-
-                    <div className='border border-black/20 w-full rounded-2xl h-90 bg-black/3 p-5'>
-                        <div>
-                            <h1 className='font-bold font-dot tracking-tight text-2xl'>GRADE DISTRIBUTION</h1>
-                            <p className='tracking-tight text-xs text-black/70'>Breakdown of grades for this semester</p>
-                        </div>
-
-                        <div>
-
-                        </div>
-                    </div>
+                    <SemStats />
+                    <GradeDistribution />
                 </div>
 
-                <div className='border border-border-20 rounded-2xl bg-muted-bg p-5'>
-                    <div className={`grid grid-cols-[0.4fr_3fr_0.4fr_0.4fr_0.4fr_0.4fr_0.4fr] gap-2 font-bold text-sm uppercase text-text-muted pb-3`}>
-                        <h1>Paper Code</h1>
-                        <h1>Subject Name</h1>
-                        <h1 className="text-center">Credits</h1>
-                        <h1 className="text-center">Internal</h1>
-                        <h1 className="text-center">External</h1>
-                        <h1 className="text-center">Total</h1>
-                        <h1 className="text-center">Grade</h1>
+                <MarksSheet/>
+
+                <div className='flex items-center justify-center gap-5 tracking-tight font-bold text-sm'>
+                    <div className='border backdrop-blur overflow-hidden border-border-20 group rounded-2xl bg-muted-bg p-1.5 px-4 pr-5 cursor-pointer relative hover:scale-106 transition-all ease-in-out duration-250'>
+                        <h1 className=' relative z-1'>Check Another Result</h1>
+                        <div className="w-full aspect-square bg-accent fixed top-16 rounded-full left-0 blur-[1vh] group-hover:top-4 transition-all duration-350 ease-in-out"></div>
                     </div>
 
-                    {subjects.map((item, index) => (
-                        <div key={index} className={`grid grid-cols-[0.4fr_3fr_0.4fr_0.4fr_0.4fr_0.4fr_0.4fr] gap-2 items-center py-3 border-t border-border-20`}>
-                            <h1 className="text-sm">{item.paperCode}</h1>
-                            <h1 className="text-sm font-semibold">{item.subjectName}</h1>
-                            <h1 className="text-center text-sm text-text-muted">{item.credits}</h1>
-                            <h1 className="text-center text-sm text-text-muted">{item.internal ?? '-'}</h1>
-                            <h1 className="text-center text-sm text-text-muted">{item.external}</h1>
-                            <h1 className="text-center text-sm font-bold">{item.total}</h1>
-                            <div className="flex justify-center">
-                                <span
-                                    className={`text-xs font-bold px-2 py-0.5 rounded ${item.grade === 'O'
-                                        ? 'bg-yellow-600/80 text-white'
-                                        : 'bg-green-600 text-white'
-                                        }`}
-                                >
-                                    {item.grade}
-                                </span>
-                            </div>
-                        </div>
-                    ))}
+                    <div className='border backdrop-blur overflow-hidden border-accent/40 text-accent group rounded-2xl bg-muted-bg p-1.5 px-4 pr-5 cursor-pointer relative hover:scale-106 transition-all ease-in-out duration-250'>
+                        <h1 className=' relative z-1'>View Leaderboard</h1>
+                        <div className="w-full aspect-square bg-accent fixed bottom-16 rounded-full left-0 blur-[1vh] group-hover:bottom-4 transition-all duration-350 ease-in-out"></div>
+                    </div>
+
                 </div>
 
             </div>
