@@ -30,6 +30,18 @@
   --border-10: rgba(0, 0, 0, 0.1);
 }
 
+/* :root {
+  --bg: rgb(18, 18, 18);
+  --muted-bg: rgba(170, 163, 163, 0.03);
+
+  --text: #ECf1ff;
+  --accent: #fe330a;
+  --muted-text: rgba(255, 255, 255, 0.5);
+
+  --border-20: rgba(255, 255, 255, 0.05);
+  --border-10: rgba(255, 255, 255, 0.1);
+} */
+
 @theme inline {
   --color-bg: var(--bg);
   --color-muted-bg: var(--muted-bg);

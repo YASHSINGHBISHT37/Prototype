@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import GradeDistribution from './analysis/GradeDistribution'
 import SemStats from './analysis/SemStats'
 import MarksSheet from './MarksSheet'
+import GPATrend from './analysis/GPATrend'
+import OverAllGD from './analysis/OverAllGD'
 // import { TextShimmer } from '@/components/motion-primitives/text-shimmer'
 
 
@@ -23,14 +25,14 @@ export default function Result() {
     ]
 
 
-  
+
 
 
 
 
     return (
-        <div className='w-full px-4 min-h-full flex md:items-center md:justify-center bg-[#ECf1ff] text-[#121212] flex-col'>
-            <div className="md:w-7xl py-28 flex flex-col gap-8 md:gap-10 w-full">
+        <div className='w-full px-4 min-h-full flex md:items-center md:justify-center bg-bg text-text flex-col'>
+            <div className="md:w-7xl py-28 flex flex-col gap-8 md:gap-6 w-full">
 
                 {/* Mobile logout */}
                 <div className='flex justify-between items-center w-full md:hidden'>
@@ -50,15 +52,25 @@ export default function Result() {
                         <div className='flex md:items-start md:justify-between'>
                             <h1 className='text-5xl md:text-6xl font-dot font-bold tracking-tight uppercase'>Yash Singh Bisht</h1>
 
-                            <div className='md:flex items-center gap-2 hidden'>
-                                <div className='border w-35 justify-center rounded-xl cursor-pointer active:scale-96 hover:scale-105 transition-all ease-in-out duration-200 p-3 px-2 pr-3 py-1 border-black/20  bg-black/3 font-dot flex items-center gap-3'>
+                            {/* BTN */}
+                            <div className='flex items-center justify-center gap-2 tracking-tight text-sm'>
+                                <div className='flex items-center gap-3 border backdrop-blur overflow-hidden border-border-20 group rounded-2xl bg-muted-bg p-1.5 px-4 pr-6 cursor-pointer relative hover:scale-106 transition-all ease-in-out duration-250'>
                                     <i class="ph ph-arrow-left text-lg"></i>
-                                    <h1>Logout</h1>
+                                    <h1 className=' relative z-1'>Logout</h1>
+                                    <div className="w-full aspect-square bg-accent/90 fixed top-16 rounded-full left-0 blur-[1vh] group-hover:top-5 transition-all duration-350 ease-in-out"></div>
                                 </div>
 
-                                <div className='border w-40 justify-center rounded-xl cursor-pointer active:scale-96 hover:scale-105 transition-all ease-in-out duration-200 p-3 pl-4 py-1 border-black/20 bg-black/3 font-dot flex items-center gap-3'>
-                                    <h1 className=''>Export PDF</h1>
-                                    <i className="ph ph-caret-down text-lg"></i>
+                                <div className='flex items-center gap-3 border backdrop-blur overflow-hidde border-border-20 group rounded-2xl bg-muted-bg p-1.5 px-4 pl-5 cursor-pointer relative hover:scale-106 transition-all ease-in-out duration-250'>
+                                    <h1 className=' relative z-1'>Export PDF</h1>
+                                    <i class="ph ph-caret-down text-lg"></i>
+                                    <div className="w-full aspect-square bg-accent/90 fixed bottom-16 rounded-full left-0 blur-[1vh] group-hover:bottom-4 transition-all duration-350 ease-in-out"></div>
+
+
+                                    <div className='flex w-full border absolute top-10 left-0 h-20'>
+                                        <h1>Select Export Option</h1>
+                                        
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -93,19 +105,17 @@ export default function Result() {
                         </div>
                     </div>
 
-
                     {/* Sem Select */}
                     <div className='flex gap-2 mt-10 md:mt-0 flex-wrap shrink-'>
                         {sem.map((item, i) => (
                             <div key={i} onClick={() => setSelect(item)}
-                                className={`border w-fit group p-1 px-2 md:p-1 rounded-xl backdrop-blur-xs overflow-hidden md:px-2 cursor-pointer relative z-9999999 transition-all ease-in-out duration-300 hover:scale-106
-                                        ${select === item ? 'bg-[#fe330a]/86 text-[#Ecf1ff] border-black/10' : 'bg-black/3 border-black/20'}`}>
+                                className={`border w-fit group p-1 px-2 md:p-1 rounded-xl backdrop-blur-xs overflow-hidden md:px-2 cursor-pointer relative z-9999999 transition-all ease-in-out duration-250 hover:scale-110
+                                        ${select === item ? 'bg-[#fe330a]/86 text-[#Ecf1ff] border-black/10' : 'bg-muted-bg border-border-10'}`}>
                                 <h1 className='text-xs md:text-sm font-dot uppercase tracking-wide whitespace-nowrap relative backdrop-blur-0 z-9'>{item}</h1>
                                 <div className="w-full aspect-square bg-[#fe330a] fixed top-16 rounded-full left-0 z-1 blur-[1vh] group-hover:top-4 transition-all duration-350 ease-in-out"></div>
                             </div>
                         ))}
                     </div>
-
                 </div>
 
                 {/* Mobile CGPA/SGPA */}
@@ -137,14 +147,14 @@ export default function Result() {
                     ))}
                 </div> */}
 
-                <div className='md:flex grid grid-cols-2 md:gap-3 gap-2 relative bg-black/3 border border-black/20 p-6 rounded-4xl overflow-hidden'>
+                <div className='md:flex grid grid-cols-2 md:gap-3 gap-2 relative bg-muted-bg border border-border-20 p-6 rounded-4xl overflow-hidden'>
                     {semMarks.map((item) => (
                         <div key={item.label} className="w-full group flex flex-col borde justify-center gap-1 items-center py-2">
                             <p className="uppercase pb-2 relative z-9 font-bold tracking-tighter">{item.label}</p>
                             <h1 className="text-5xl md:text-7xl font-bold relative z-9 tracking-tight uppercase font-dot text-[#fe330a]/90">
                                 {item.value}
                                 {item.outOf && (
-                                    <span className='text-c md:text-xl font-normal tracking-normal text-black'>{item.outOf}</span>
+                                    <span className='text-c md:text-xl font-normal tracking-normal text-muted-text/50'>{item.outOf}</span>
                                 )}
                             </h1>
                             <p className="text-xs text-muted-text md:text-xs pt-3 relative z-9 leading-3">{item.subHead}</p>
@@ -159,7 +169,12 @@ export default function Result() {
                     <GradeDistribution />
                 </div>
 
-                <MarksSheet/>
+                <div className='md:flex md:flex-row flex-col flex items-center justify-between w-full gap-3'>
+                    <GPATrend />
+                    <OverAllGD />
+                </div>
+
+                <MarksSheet />
 
                 <div className='flex items-center justify-center gap-5 tracking-tight font-bold text-sm'>
                     <div className='border backdrop-blur overflow-hidden border-border-20 group rounded-2xl bg-muted-bg p-1.5 px-4 pr-5 cursor-pointer relative hover:scale-106 transition-all ease-in-out duration-250'>
@@ -171,7 +186,6 @@ export default function Result() {
                         <h1 className=' relative z-1'>View Leaderboard</h1>
                         <div className="w-full aspect-square bg-accent fixed bottom-16 rounded-full left-0 blur-[1vh] group-hover:bottom-4 transition-all duration-350 ease-in-out"></div>
                     </div>
-
                 </div>
 
             </div>

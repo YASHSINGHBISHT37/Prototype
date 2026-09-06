@@ -29,7 +29,7 @@ export default function MarksSheet() {
                 <h1 className="text-center">External</h1>
                 <h1 className="text-center">Total</h1>
                 <h1 className="text-center">Grade</h1>
-            </div>
+            </div>  
 
             {subjects.map((item, index) => (
                 <div key={index} className={`grid grid-cols-[0.5fr_3fr_0.4fr_0.4fr_0.4fr_0.4fr_0.4fr] gap-2 items-center py-3 border-t border-border-20 hover:bg-black/10`}>
