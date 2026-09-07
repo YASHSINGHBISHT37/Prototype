@@ -14,12 +14,15 @@ export default function Result() {
 
     const isOverAll = select === 'Over All'
 
+    const semOptions = ['Over All', ...std.semesters.map((item) => `Sem ${item.semester}`)]
+
     const details = [
         { label: "Enrollment No.", value: std.enrollmentNo ?? "—" },
         { label: "Year of admission", value: std.yearOfAdmission ?? "—" },
         { label: "Institute", value: std.institute ?? "—", code: '903' },
         { label: "Program", value: std.program ?? "—", code: '020' },
     ]
+
 
     return (
         <div className='w-full px-4 min-h-full flex md:items-center md:justify-center bg-bg text-text flex-col'>
@@ -98,11 +101,11 @@ export default function Result() {
 
                     {/* Sem Select */}
                     <div className='flex gap-2 mt-10 md:mt-0 flex-wrap shrink-'>
-                        {std.semesters.map((item, i) => (
+                        {semOptions.map((item, i) => (
                             <div key={i} onClick={() => setSelect(item)}
                                 className={`border w-fit group p-1 px-2 md:p-1 rounded-xl backdrop-blur-xs overflow-hidden md:px-2 cursor-pointer relative z-9999999 transition-all ease-in-out duration-250 hover:scale-110
                                         ${select === item ? 'bg-[#fe330a]/86 text-[#Ecf1ff] border-black/10' : 'bg-muted-bg border-border-10'}`}>
-                                <h1 className='text-xs md:text-sm font-dot uppercase tracking-wide whitespace-nowrap relative backdrop-blur-0 z-9'>Sem {item.semester}</h1>
+                                <h1 className='text-xs md:text-sm font-dot uppercase tracking-wide whitespace-nowrap relative backdrop-blur-0 z-9'>{item}</h1>
                                 <div className="w-full aspect-square bg-[#fe330a] fixed top-16 rounded-full left-0 z-1 blur-[1vh] group-hover:top-4 transition-all duration-350 ease-in-out"></div>
                             </div>
                         ))}

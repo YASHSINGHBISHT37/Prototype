@@ -9,7 +9,7 @@ export default function ResultDetails() {
     ]
 
     return (
-        <div className='md:flex grid grid-cols-2 md:gap-3 gap-2 relative bg-muted-bg border border-border-20 p-6 rounded-4xl overflow-hidden'>
+        <div className='md:flex grid grid-cols-2 md:gap-3 gap-2 relative bg-muted-bg border border-border-20 p-6 py-8 rounded-4xl overflow-hidden'>
             {/* details */}
             {/* <div className='md:flex grid grid-cols-2 md:gap-3 gap-2 relative'>
                     {semMarks.map((item) => (
