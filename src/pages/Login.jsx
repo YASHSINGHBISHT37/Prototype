@@ -14,7 +14,7 @@ export default function Test4({ showToggle = true, type = 'password' }) {
                     <Marquee direction='bottom' speedd={4800} />
                     <Marquee speedd={4000} />
                     <Marquee direction='bottom' speedd={3200} />
-                    <Marquee speedd={4578} />
+                    <Marquee speedd={4578} />   
                 </div>
 
                 <div className='w-4xl h-full flex flex-col items-center justify-center'>

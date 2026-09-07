@@ -14,22 +14,34 @@ export default function MarksSheet() {
         { paperCode: "BCA-204P", subjectName: "SOFTWARE TESTING LAB", credits: 1, internal: 37, external: 47, total: 84, grade: "A+" },
         { paperCode: "BCA-212P", subjectName: "DATA SCIENCE LAB", credits: 2, internal: 30, external: 46, total: 76, grade: "A+" }
     ]
-    
+
+
+
     return (
         <div className='border border-border-20 rounded-3xl bg-muted-bg p-5'>
-            <div className='mb-4 w-full flex items-center justify-between'>
+            <div className='mb-6 w-full flex flex-col'>
                 <h1 className='font-bold tracking-tighter text-3xl font-dot'>Semester 4 Result</h1>
                 <p className='text-muted-text text-sm'>Showing 9 subjects</p>
             </div>
             <div className={`grid grid-cols-[0.5fr_3fr_0.4fr_0.4fr_0.4fr_0.4fr_0.4fr] gap-2 font-bold text-md uppercase text-text-muted pb-3 tracking-tighter`}>
                 <h1>Paper Code</h1>
                 <h1>Subject Name</h1>
-                <h1 className="text-center">Credits</h1>
+                <h1 className="text-center">Cedits</h1>
                 <h1 className="text-center">Internal</h1>
                 <h1 className="text-center">External</h1>
                 <h1 className="text-center">Total</h1>
                 <h1 className="text-center">Grade</h1>
-            </div>  
+            </div>
+
+            {/* <div className={`grid grid-cols-[0.5fr_3fr_0.4fr_0.4fr_0.4fr_0.4fr_0.4fr] gap-2 font-bold text-md uppercase text-text-muted pb-3 tracking-tighter`}>
+                <h1>Paper Code</h1>
+                <h1>Subject Name</h1>
+                <h1 className="text-center">Cedits</h1>
+                <h1 className="text-center">Int</h1>
+                <h1 className="text-center">Ext</h1>
+                <h1 className="text-center">Total</h1>
+                <h1 className="text-center">Grade</h1>
+            </div> */}
 
             {subjects.map((item, index) => (
                 <div key={index} className={`grid grid-cols-[0.5fr_3fr_0.4fr_0.4fr_0.4fr_0.4fr_0.4fr] gap-2 items-center py-3 border-t border-border-20 hover:bg-black/10`}>
@@ -51,6 +63,7 @@ export default function MarksSheet() {
                     </div>
                 </div>
             ))}
+
         </div>
     )
 }

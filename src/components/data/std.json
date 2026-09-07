@@ -1,0 +1,410 @@
+{
+  "enrollmentNo": "03990302024",
+  "name": "YASH SINGH BISHT",
+  "program": "BACHELOR OF COMPUTER APPLICATIONS",
+  "institute": "INSTITUTE OF INNOVATION IN  TECHNOLOGY & MANAGEMENT",
+  "yearOfAdmission": 2024,
+  "cgpa": 8.81,
+  "semesters": [
+    {
+      "semester": 1,
+      "subjects": [
+        {
+          "code": "BCA101T",
+          "name": "PROGRAMMING FOR PROBLEM SOLVING USING C",
+          "internal": 35,
+          "external": 28,
+          "total": 63,
+          "gradePoint": 7,
+          "grade": "B+",
+          "credits": 4
+        },
+        {
+          "code": "BCA103T",
+          "name": "FUNDAMENTAL OF INFORMATION TECHNOLOGY",
+          "internal": 31,
+          "external": 37,
+          "total": 68,
+          "gradePoint": 8,
+          "grade": "A",
+          "credits": 4
+        },
+        {
+          "code": "BCA105T",
+          "name": "WEB TECHNOLOGIES",
+          "internal": 38,
+          "external": 45,
+          "total": 83,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 4
+        },
+        {
+          "code": "BCA107T",
+          "name": "MATHEMATICAL FOUNDATION FOR COMPUTER SCIENCE",
+          "internal": 37,
+          "external": 39,
+          "total": 76,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 4
+        },
+        {
+          "code": "BCA141T",
+          "name": "WRITING SKILLS",
+          "internal": 34,
+          "external": 32,
+          "total": 66,
+          "gradePoint": 8,
+          "grade": "A",
+          "credits": 3
+        },
+        {
+          "code": "BCA191T",
+          "name": "UNDERSTANDING INDIA",
+          "internal": 0,
+          "external": 75,
+          "total": 75,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 2
+        },
+        {
+          "code": "BCA101P",
+          "name": "PROGRAMMING FOR PROBLEM SOLVING USING C LAB",
+          "internal": 38,
+          "external": 56,
+          "total": 94,
+          "gradePoint": 10,
+          "grade": "O",
+          "credits": 2
+        },
+        {
+          "code": "BCA103P",
+          "name": "FUNDAMENTAL OF INFORMATION TECHNOLOGY LAB",
+          "internal": 32,
+          "external": 52,
+          "total": 84,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 2
+        },
+        {
+          "code": "BCA105P",
+          "name": "WEB TECHNOLOGIES LAB",
+          "internal": 39,
+          "external": 51,
+          "total": 90,
+          "gradePoint": 10,
+          "grade": "O",
+          "credits": 1
+        }
+      ]
+    },
+    {
+      "semester": 2,
+      "subjects": [
+        {
+          "code": "BCA102T",
+          "name": "DATABASE MANAGEMENT SYSTEM (DBMS)",
+          "internal": 29,
+          "external": 31,
+          "total": 60,
+          "gradePoint": 7,
+          "grade": "B+",
+          "credits": 4
+        },
+        {
+          "code": "BCA104T",
+          "name": "OBJECT ORIENTED PROGRAMMING USING JAVA",
+          "internal": 24,
+          "external": 51,
+          "total": 75,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 4
+        },
+        {
+          "code": "BCA106T",
+          "name": "DATA STRUCTURES AND ALGORITHMS",
+          "internal": 32,
+          "external": 36,
+          "total": 68,
+          "gradePoint": 8,
+          "grade": "A",
+          "credits": 4
+        },
+        {
+          "code": "BCA108T",
+          "name": "SOFTWARE ENGINEERING",
+          "internal": 29,
+          "external": 43,
+          "total": 72,
+          "gradePoint": 8,
+          "grade": "A",
+          "credits": 4
+        },
+        {
+          "code": "BCA142T",
+          "name": "SOFT SKILLS",
+          "internal": 0,
+          "external": 91,
+          "total": 91,
+          "gradePoint": 10,
+          "grade": "O",
+          "credits": 3
+        },
+        {
+          "code": "BCA192T",
+          "name": "ENVIRONMENT STUDIES",
+          "internal": 32,
+          "external": 40,
+          "total": 72,
+          "gradePoint": 8,
+          "grade": "A",
+          "credits": 2
+        },
+        {
+          "code": "BCA102P",
+          "name": "DBMS LAB",
+          "internal": 31,
+          "external": 47,
+          "total": 78,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 1
+        },
+        {
+          "code": "BCA104P",
+          "name": "OBJECT ORIENTED PROGRAMMING USING JAVA LAB",
+          "internal": 35,
+          "external": 48,
+          "total": 83,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 2
+        },
+        {
+          "code": "BCA106P",
+          "name": "DATA STRUCTURES AND ALGORITHMS LAB",
+          "internal": 39,
+          "external": 42,
+          "total": 81,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 1
+        },
+        {
+          "code": "BCA108P",
+          "name": "SOFTWARE ENGINEERING LAB",
+          "internal": 32,
+          "external": 50,
+          "total": 82,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 1
+        }
+      ]
+    },
+    {
+      "semester": 3,
+      "subjects": [
+        {
+          "code": "BCA201T",
+          "name": "PYTHON PROGRAMING",
+          "internal": 34,
+          "external": 40,
+          "total": 74,
+          "gradePoint": 8,
+          "grade": "A",
+          "credits": 4
+        },
+        {
+          "code": "BCA203T",
+          "name": "DYNAMIC WEB DESIGNING",
+          "internal": 38,
+          "external": 50,
+          "total": 88,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 4
+        },
+        {
+          "code": "BCA205T",
+          "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+          "internal": 38,
+          "external": 45,
+          "total": 83,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 4
+        },
+        {
+          "code": "BCA207T",
+          "name": "DISCRETE MATHEMATICS",
+          "internal": 38,
+          "external": 49,
+          "total": 87,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 4
+        },
+        {
+          "code": "BCA221T",
+          "name": "PRINCIPLES OF MANAGEMENT AND ORGANIZATIONAL BEHAVIOR",
+          "internal": 36,
+          "external": 47,
+          "total": 83,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 3
+        },
+        {
+          "code": "BCA261",
+          "name": "VOCATIONAL COURSE",
+          "internal": 0,
+          "external": 88,
+          "total": 88,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 4
+        },
+        {
+          "code": "BCA291T",
+          "name": "HUMAN VALUES AND ETHICS",
+          "internal": 0,
+          "external": 86,
+          "total": 86,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 2
+        },
+        {
+          "code": "BCA201P",
+          "name": "PYTHON PROGRAMING LAB",
+          "internal": 33,
+          "external": 52,
+          "total": 85,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 2
+        },
+        {
+          "code": "BCA203P",
+          "name": "DYNAMIC WEB DESIGNING LAB",
+          "internal": 38,
+          "external": 53,
+          "total": 91,
+          "gradePoint": 10,
+          "grade": "O",
+          "credits": 1
+        },
+        {
+          "code": "BCA205P",
+          "name": "COMPUTER ORGANIZATION AND ARCHITECTURE LAB",
+          "internal": 38,
+          "external": 52,
+          "total": 90,
+          "gradePoint": 10,
+          "grade": "O",
+          "credits": 1
+        }
+      ]
+    },
+    {
+      "semester": 4,
+      "subjects": [
+        {
+          "code": "BCA202T",
+          "name": "OPERATING SYSTEMS",
+          "internal": 37,
+          "external": 51,
+          "total": 88,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 4
+        },
+        {
+          "code": "BCA204T",
+          "name": "SOFTWARE TESTING",
+          "internal": 40,
+          "external": 52,
+          "total": 92,
+          "gradePoint": 10,
+          "grade": "O",
+          "credits": 4
+        },
+        {
+          "code": "BCA212T",
+          "name": "INTRODUCTION TO DATA SCIENCE",
+          "internal": 32,
+          "external": 51,
+          "total": 83,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 4
+        },
+        {
+          "code": "BCA222T",
+          "name": "DIGITAL MARKETING",
+          "internal": 35,
+          "external": 57,
+          "total": 92,
+          "gradePoint": 10,
+          "grade": "O",
+          "credits": 3
+        },
+        {
+          "code": "BCA232",
+          "name": "INTRODUCTION TO LOGIC AND CRITICAL THINKING",
+          "internal": 38,
+          "external": 43,
+          "total": 81,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 2
+        },
+        {
+          "code": "BCA234",
+          "name": "HEALTH AND WELLNESS, YOGA EDUCATION AND SPORTS AND FITNESS",
+          "internal": 0,
+          "external": 92,
+          "total": 92,
+          "gradePoint": 10,
+          "grade": "O",
+          "credits": 2
+        },
+        {
+          "code": "BCA202P",
+          "name": "OPERATING SYSTEMS LAB",
+          "internal": 36,
+          "external": 44,
+          "total": 80,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 1
+        },
+        {
+          "code": "BCA204P",
+          "name": "SOFTWARE TESTING LAB",
+          "internal": 37,
+          "external": 47,
+          "total": 84,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 1
+        },
+        {
+          "code": "BCA212P",
+          "name": "DATA SCIENCE LAB",
+          "internal": 30,
+          "external": 46,
+          "total": 76,
+          "gradePoint": 9,
+          "grade": "A+",
+          "credits": 2
+        }
+      ]
+    }
+  ]
+}
