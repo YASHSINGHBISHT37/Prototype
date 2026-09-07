@@ -66,7 +66,7 @@ export default function Result() {
                                     <div className="w-full aspect-square bg-accent/90 fixed bottom-16 rounded-full left-0 blur-[1vh] group-hover:bottom-4 transition-all duration-350 ease-in-out"></div>
 
 
-                                    <div className='flex w-full border absolute top-10 left-0 h-20'>
+                                    <div className='flex w-full border border-border-20 backdrop-blur-xs z-10 bg-black absolute top-10 left-0 h-20 p-2 rounded-xl'>
                                         <h1>Select Export Option</h1>
                                         
 
