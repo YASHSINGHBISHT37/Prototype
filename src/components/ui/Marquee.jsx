@@ -60,7 +60,7 @@ export default function Marquee({
         <div className="h-full overflow-hidden gap-">
             <motion.div className="flex flex-col items-center h-max gap-2" style={{ y }}>
                 {items.map((num, i) => (
-                    <div key={i} className="flex flex-col items-center border border-black/20 rounded-2xl group backdrop-blur-2xl overflow-hidden bg-black/3">
+                    <div key={i} className="flex flex-col items-center border border-border-20 rounded-2xl group backdrop-blur-2xl overflow-hidden bg-muted-bg">
                         <img src={`/favicon/2.png`} className="w-60 aspect-square relative z-9" />
                         <div className={`w-full aspect-square bg-[#fe330a]/80 fixed ${direction}-30 rounded-full left-0 z-1 blur-[2vh] group-hover:${direction}-0 transition-all duration-500 ease-in-out`}></div>
                     </div>

@@ -15,7 +15,7 @@ export default function OverAllGD() {
         { name: 'D', sub: '7', perc: '47' },
     ]
     return (
-        <div className='border border-border-20 w-1/2 rounded-3xl h-90 bg-muted-bg p-5 px-6'>
+        <div className='border border-border-20 w-1/2 rounded-3xl h-full bg-muted-bg p-5 px-6'>
             <div className='mb-6'>
                 <h1 className='font-bold font-dot tracking-tighter text-3xl capitalize'>Grade Distribution</h1>
             </div>

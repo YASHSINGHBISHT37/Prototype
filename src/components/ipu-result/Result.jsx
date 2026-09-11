@@ -8,6 +8,7 @@ import { div } from 'motion/react-client'
 // import { TextShimmer } from '@/components/motion-primitives/text-shimmer'
 import std from './../data/std.json'
 import ResultDetails from './ResultDetails'
+import MyBar from './analysis/MyBar'
 
 export default function Result() {
     const [select, setSelect] = useState('Over All')
@@ -115,15 +116,16 @@ export default function Result() {
                 <ResultDetails />
 
                 {isOverAll && (
-                    <div className='md:flex md:flex-row flex-col flex items-center justify-between w-full gap-3'>
+                    <div className='md:flex md:flex-row flex-col flex items-center justify-between w-full h-100 gap-3'>
                         <GPATrend />
                         <OverAllGD />
                     </div>
                 )}
 
                 {!isOverAll && (
-                    <div className='md:flex md:flex-row flex-col flex items-center justify-between w-full gap-3'>
-                        <SemStats />
+                    <div className='md:flex md:flex-row flex-col flex items-center justify-between w-full h-100 gap-3'>
+                        {/* <SemStats /> */}
+                        <MyBar/>
                         <GradeDistribution />
                     </div>
                 )}

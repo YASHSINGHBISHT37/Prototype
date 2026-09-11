@@ -18,7 +18,7 @@ export default function GradeDistribution() {
         { name: 'B+', is: '2' },
     ]
     return (
-        <div className='border border-border-20 rounded-3xl h-90 bg-muted-bg p-5 px-6 w-1/2'>
+        <div className='border border-border-20 rounded-3xl h-full bg-muted-bg p-5 px-6 w-1/2'>
             <div className='mb-4'>
                 <h1 className='font-bold font-dot tracking-tighter text-3xl capitalize'>Grade Distribution</h1>
                 <p className='tracking-tight text-sm text-black/70'>Breakdown of grades for this semester</p>

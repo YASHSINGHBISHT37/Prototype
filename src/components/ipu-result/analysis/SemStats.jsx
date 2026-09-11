@@ -11,7 +11,7 @@ export default function SemStats() {
         { name: 'Most Common Grade', is: 'A+ (4)' },
     ]
     return (
-        <div className='border border-border-20 w-1/2 rounded-3xl h-90 bg-muted-bg p-5 px-6'>
+        <div className='border border-border-20 w-1/2 rounded-3xl h-full bg-muted-bg p-5 px-6'>
             <div>
                 <h1 className='font-bold font-dot tracking-tighter text-3xl capitalize'>Semseter Statistics</h1>
                 <p className='tracking-tight text-sm text-black/70'>Subject-wise marks distribution</p>
